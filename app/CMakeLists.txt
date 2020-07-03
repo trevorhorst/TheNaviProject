@@ -6,11 +6,8 @@ add_executable(${PROJECT_NAME} main.cpp)
 target_link_libraries(
     ${PROJECT_NAME}
     ${CONTROL_PROJECT}
-    common
+    example
     pthread
-    readline
-    microhttpd
-    curl
     )
 
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CONTROL_BIN_DIR})

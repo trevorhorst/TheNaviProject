@@ -38,4 +38,16 @@ add_subdirectory(navi/remote)
 add_subdirectory(navi/common)
 add_subdirectory(${CONTROL_PROJECT})
 
+if( USE_HTTP )
+    message( "Using HTTP library" )
+    add_subdirectory( navi/http )
+endif()
+
+if( USE_SMTP )
+    message( "Using SMTP library" )
+    add_subdirectory( navi/smtp )
+endif()
+
+
+
 # install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CONTROL_BIN_DIR})
