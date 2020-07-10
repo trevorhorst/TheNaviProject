@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
-project(TheNaviProject)
+project(navi-example)
 
 # Creates a truncated filename macro for use with the logger
 # https://stackoverflow.com/questions/8487986/file-macro-shows-full-path

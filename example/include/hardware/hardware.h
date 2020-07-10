@@ -25,6 +25,7 @@
 #include "common/drivers/serial.h"
 
 #include "http/command.h"
+#include "http/client.h"
 
 #include "hardware/resources/resources.h"
 
@@ -34,6 +35,8 @@ class Hardware
 {
     friend class Singleton< Hardware >;
 public:
+    Transport::Client * getClient() override;
+
 private:
     Hardware();
     ~Hardware();
@@ -43,6 +46,7 @@ private:
 
     DateTime mDateTime;
     Http::Server mServer;
+    Http::Client mClient;
     System mSystem;
     Timer mHeartbeatTimer;
 
